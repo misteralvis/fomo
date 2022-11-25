@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fomo"
+version = "1.0.1"
+authors = [
+  { name="Matt Alvis", email="thetechietidbits@gmail.com" },
+]
+description = "FOMO: A tool to help alleviate your Fear Of Major Outages. Programmatically manage AWS Cloudwatch, Zabbix, PagerDuty, Grafana."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["boto3", "botocore", "pyzabbix", "tabulate","pytomlpp"]
+
+[project.urls]
+"Homepage" = "https://github.com/techietidbits/fomo"
+"Bug Tracker" = "https://github.com/techietidbits/fomo/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"fomo.conf" = ["fomo.toml.example"]

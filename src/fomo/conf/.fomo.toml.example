@@ -1,0 +1,11 @@
+# fomo configuration file example used for storing personal preferences.
+# This file is expected to reside in home directory at ~/.fomo.toml 
+
+title = "FOMO configuration file"
+
+[cloudwatch]
+ default_region = "us-east-1"
+
+[zabbix]
+ url = "https://zabbix_url/api_jsonrpc.php"
+ api_key = "abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz00"
